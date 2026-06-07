@@ -1,0 +1,33 @@
+.category-section {
+  padding: 50px 0 20px;
+  background: var(--light-gray);
+}
+
+.category-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.category-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  background: var(--white);
+  color: #333;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.category-btn.active {
+  background: var(--primary-red);
+  color: var(--white);
+}

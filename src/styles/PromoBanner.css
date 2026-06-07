@@ -1,0 +1,27 @@
+.promo-banner {
+  background: var(--dark-bg);
+  color: var(--white);
+  padding: 30px 0;
+}
+
+.promo-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.promo-container h4 {
+  color: var(--primary-red);
+  margin-bottom: 8px;
+}
+
+.promo-container p {
+  color: #ddd;
+}
+
+@media (max-width: 768px) {
+  .promo-container {
+    grid-template-columns: 1fr;
+  }
+}

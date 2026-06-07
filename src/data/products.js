@@ -1,0 +1,58 @@
+export const productsData = [
+  {
+    id: 1,
+    name: "Brembo GT Brake Kit",
+    category: "Brakes",
+    price: 12500,
+    image: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 2,
+    name: "Xenon LED Headlights",
+    category: "Lighting",
+    price: 4500,
+    image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 3,
+    name: "XYZ Racing Suspension",
+    category: "Suspension",
+    price: 28000,
+    image: "https://imgs.search.brave.com/kWoX9DSdwuQuvhP5svClKBp2HSsE56w-p8J-qDCqYIo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20veHl6LXJh/Y2luZy5jby51ay93/cC1jb250ZW50L3Vw/bG9hZHMvMjAxOC8w/Ni94eXpfcmFjaW5n/X3NwZWMuanBnP3Jl/c2l6ZT0yNDcsMjQ3/JnNzbD0x",
+  },
+  {
+    id: 4,
+    name: "Turbocharger Stage 2",
+    category: "Performance",
+    price: 55000,
+    image: "https://imgs.search.brave.com/Tq_tIgGkiaPUxhSnazrkMHBO8NyQ2jnj7QzsOQW4jvs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jY3R0/dXJiby5jb20uYXUv/Y2RuL3Nob3AvZmls/ZXMvczItODEyOTcx/LTEuanBnP3Y9MTc2/MTE5ODQzOSZ3aWR0/aD0xMjE0",
+  },
+  {
+    id: 5,
+    name: "Precision Torque Wrench",
+    category: "Tools",
+    price: 1850,
+    image: "https://imgs.search.brave.com/lK6etyELmJ8gxSxstzRxmIivc3FHSiSQjM8vSk4vCko/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLmVi/YXlpbWcuY29tL2lt/YWdlcy9nL0I3RUFB/T1N3elkxZEwtLWgv/cy1sOTYwLndlYnA",
+  },
+  {
+    id: 6,
+    name: "Ceramic Pro Coating",
+    category: "Interior",
+    price: 2200,
+    image: "https://imgs.search.brave.com/AR4tFOMPvJzDKj45yexrfID3JCpPjic_eT7BTJSEksw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4x/MS5iaWdjb21tZXJj/ZS5jb20vcy1namhi/ejIxNDh5L2ltYWdl/cy9zdGVuY2lsL29y/aWdpbmFsL2ltYWdl/LW1hbmFnZXIvY2Mt/cHJvLXBhaW50LWNl/cmFtaWMtODAweDgw/MC1oZWFkZXIuanBn",
+  },
+  {
+    id: 7,
+    name: "Carbon Fiber Spoiler",
+    category: "Exterior",
+    price: 8500,
+    image: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 8,
+    name: "Racing Bucket Seats",
+    category: "Interior",
+    price: 12000,
+    image: "https://imgs.search.brave.com/mAKJbEKDkI59QR13cTXHCL429uYMDbjOGWL6iaOGSQU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFTbjk3Y2I2cEwu/anBn",
+  },
+];
