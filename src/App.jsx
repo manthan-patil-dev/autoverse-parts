@@ -1,11 +1,12 @@
-import  { useState } from 'react';
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import VehicleFinder from './components/VehicleFinder';
-import PromoBanner from './components/PromoBanner';
-import CategorySection from './components/CategorySection';
-import ProductGrid from './components/ProductGrid';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import Shop from './pages/Shop';
+import Blog from './pages/Blog';
+import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 const App = () => {
   const [cartCount, setCartCount] = useState(0);
@@ -18,17 +19,33 @@ const App = () => {
   return (
     <>
       <Navbar cartCount={cartCount} />
-      <Hero />
-      <VehicleFinder />
-      <PromoBanner />
-      <CategorySection
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-      />
-      <ProductGrid
-        selectedCategory={selectedCategory}
-        addToCart={addToCart}
-      />
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              selectedCategory={selectedCategory}
+              setSelectedCategory={setSelectedCategory}
+              addToCart={addToCart}
+            />
+          }
+        />
+        <Route
+          path="/shop"
+          element={
+            <Shop
+              selectedCategory={selectedCategory}
+              setSelectedCategory={setSelectedCategory}
+              addToCart={addToCart}
+            />
+          }
+        />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+
       <Footer />
     </>
   );
