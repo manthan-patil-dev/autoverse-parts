@@ -1,22 +1,13 @@
-import 'react';
+import React from 'react';
 import '../styles/PromoBanner.css';
 
 const PromoBanner = () => {
   return (
-    <section className="promo-banner" id="offers">
-      <div className="container promo-container">
-        <div>
-          <h4>Free Shipping</h4>
-          <p>On all orders above ₹4,999</p>
-        </div>
-        <div>
-          <h4>Performance Deals</h4>
-          <p>Save up to 30% on selected parts</p>
-        </div>
-        <div>
-          <h4>Expert Support</h4>
-          <p>Get help choosing exact-fit parts</p>
-        </div>
+    <section className="promo-banner">
+      <div className="container promo-inner">
+        <p>Free shipping on orders above ₹5,000</p>
+        <p>Premium quality parts with fast support</p>
+        <p>New arrivals added every week</p>
       </div>
     </section>
   );

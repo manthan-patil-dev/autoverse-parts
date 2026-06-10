@@ -1,26 +1,31 @@
-import  'react';
+import React from 'react';
 import '../styles/CategorySection.css';
 
 const categories = [
+  'All',
   'Brakes',
   'Lighting',
   'Suspension',
-  'Performance',
   'Interior',
-  'Exterior',
+  'Performance',
   'Tools',
+  'Accessories'
 ];
 
 const CategorySection = ({ selectedCategory, setSelectedCategory }) => {
   return (
-    <section className="category-section">
+    <section className="category-section" id="categories">
       <div className="container">
-        <h2>Shop by Category</h2>
+        <div className="section-header">
+          <h2>Browse by Category</h2>
+          <p>Filter products by the part type you need.</p>
+        </div>
+
         <div className="category-list">
           {categories.map((category) => (
             <button
               key={category}
-              className={selectedCategory === category ? 'category-btn active' : 'category-btn'}
+              className={`category-btn ${selectedCategory === category ? 'active' : ''}`}
               onClick={() => setSelectedCategory(category)}
             >
               {category}

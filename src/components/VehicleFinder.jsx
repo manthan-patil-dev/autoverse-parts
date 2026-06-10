@@ -1,49 +1,43 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import '../styles/VehicleFinder.css';
 
 const VehicleFinder = () => {
-  const [vehicle, setVehicle] = useState({ year: '', make: '', model: '' });
-
-  const handleFind = () => {
-    if (!vehicle.year || !vehicle.make || !vehicle.model) {
-      alert('Please select all fields to find parts.');
-    } else {
-      alert(`Searching parts for: ${vehicle.year} ${vehicle.make} ${vehicle.model}`);
-    }
-  };
+  const [year, setYear] = useState('');
+  const [make, setMake] = useState('');
+  const [model, setModel] = useState('');
 
   return (
-    <section className="vehicle-finder" id="shop">
-      <div className="container finder-container">
-        <h3>Find Parts for Your Vehicle</h3>
-        <div className="finder-inputs">
-          <select onChange={(e) => setVehicle({ ...vehicle, year: e.target.value })}>
-            <option value="">Year</option>
-            <option>2024</option>
-            <option>2023</option>
-            <option>2022</option>
-            <option>2021</option>
-          </select>
+    <section className="vehicle-finder">
+      <div className="container">
+        <div className="finder-box">
+          <h2>Find Parts for Your Vehicle</h2>
+          <div className="finder-grid">
+            <select value={year} onChange={(e) => setYear(e.target.value)}>
+              <option value="">Year</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+            </select>
 
-          <select onChange={(e) => setVehicle({ ...vehicle, make: e.target.value })}>
-            <option value="">Make</option>
-            <option>Toyota</option>
-            <option>Honda</option>
-            <option>Ford</option>
-            <option>BMW</option>
-          </select>
+            <select value={make} onChange={(e) => setMake(e.target.value)}>
+              <option value="">Make</option>
+              <option value="Toyota">Toyota</option>
+              <option value="Honda">Honda</option>
+              <option value="Hyundai">Hyundai</option>
+              <option value="BMW">BMW</option>
+            </select>
 
-          <select onChange={(e) => setVehicle({ ...vehicle, model: e.target.value })}>
-            <option value="">Model</option>
-            <option>Civic</option>
-            <option>Mustang</option>
-            <option>Supra</option>
-            <option>M4</option>
-          </select>
+            <select value={model} onChange={(e) => setModel(e.target.value)}>
+              <option value="">Model</option>
+              <option value="Innova">Innova</option>
+              <option value="City">City</option>
+              <option value="Creta">Creta</option>
+              <option value="X1">X1</option>
+            </select>
 
-          <button className="btn btn-primary" onClick={handleFind}>
-            Find Parts
-          </button>
+            <button className="btn btn-primary">Search</button>
+          </div>
         </div>
       </div>
     </section>

@@ -1,18 +1,34 @@
 import  'react';
+import '../styles/ProductCard.css';
 
-const ProductCard = ({ product, addToCart }) => {
+const ProductCard = ({ product, onAddClick, onDeleteClick }) => {
   return (
-    <div className="product-card">
-      <img src={product.image} alt={product.name} />
+    <article className="product-card">
+      <div className="product-card-actions">
+        <button
+          className="action-circle add"
+          onClick={() => onAddClick(product)}
+          title="Edit item"
+        >
+          +
+        </button>
+        <button
+          className="action-circle delete"
+          onClick={() => onDeleteClick(product.id)}
+          title="Delete item"
+        >
+          −
+        </button>
+      </div>
+
+      <img src={product.image} alt={product.name} className="product-image" />
+
       <div className="product-info">
         <span className="product-category">{product.category}</span>
         <h3>{product.name}</h3>
-        <p>₹{product.price.toLocaleString('en-IN')}</p>
-        <button className="btn btn-primary" onClick={() => addToCart(product)}>
-          Add to Cart
-        </button>
+        <p className="product-price">₹{Number(product.price).toLocaleString('en-IN')}</p>
       </div>
-    </div>
+    </article>
   );
 };
 
